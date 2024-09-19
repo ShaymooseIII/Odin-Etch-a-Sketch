@@ -39,9 +39,16 @@ gridContainer.addEventListener("mouseover", (e) =>{
     }
 })
 
-// adding button to top of screen to give prompt
-
+//grabbing button and assigning function
+gridBtn = document.querySelector("#grid-size");
+document.getElementById("grid-size").onclick = getGridSize;
     
 //Function for button click to give user prompt 
-
+function getGridSize(){
+console.log("clicked");
     //take input and create new grid 
+    let size = prompt("Enter grid size:");
+    if(size !== null){
+        createGrid(size);
+    }
+}
