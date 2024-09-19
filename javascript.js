@@ -11,7 +11,7 @@ function createGrid(gridSize = 16){
         for(let j = 1; j <= gridSize; j++){
             let box = document.createElement("div");
             box.classList.add("box");
-            box.setAttribute("id", `box-${i+j}`);
+            // box.setAttribute("id", `box-${i+j}`);
             row.appendChild(box);
         }
 
@@ -20,14 +20,23 @@ function createGrid(gridSize = 16){
 
 createGrid();
 
-
+//function for changing of color to accept color and element
+function changeColor(box,color = "black"){
+    switch(color){
+        case "black":
+            box.style.backgroundColor = "black";
+            break;
+    }
+}
 
 // event listener for when mouse enters box
 gridContainer.addEventListener("mouseover", (e) =>{
     box = e.target;
     console.log(box);
-    //changing of the box color 
-    box.style.backgroundColor = "blue";
+    if(box !== e.currentTarget){
+        //changing of the box color 
+        changeColor(box);
+    }
 })
 
 // adding button to top of screen
