@@ -12,5 +12,16 @@
     width: 960px;
     height: 960px;
     border: black 2px solid;
+    flex-direction: column;
     /* background-color: blue; */
+}
+
+.grid-row{
+    display: flex;
+    flex: 1;
+}
+
+.box{
+    flex: 1;
+    border: black 1px solid;
 }
