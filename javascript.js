@@ -18,7 +18,7 @@ function createGrid(gridSize = 16){
     }
 }
 
-createGrid();
+// createGrid();
 
 //function for changing of color to accept color and element
 function changeColor(box,color = "black"){
@@ -39,7 +39,8 @@ gridContainer.addEventListener("mouseover", (e) =>{
     }
 })
 
-// adding button to top of screen
+// adding button to top of screen to give prompt
+
     
 //Function for button click to give user prompt 
 
