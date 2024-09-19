@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+}
+
+.grid-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-container{
+    display: flex;
+    width: 960px;
+    height: 960px;
+    border: black 2px solid;
+    /* background-color: blue; */
+}
