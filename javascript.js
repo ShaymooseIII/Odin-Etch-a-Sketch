@@ -2,7 +2,8 @@
 const gridContainer = document.querySelector(".grid-container");
 const buttonContainer = document.querySelector(".button-container");
 
-let size = 16
+let size = 16;
+let color = 'black';
 //function to create grid default will be 16
 function createGrid(gridSize = 16){
     //clear grid before creation
@@ -63,11 +64,15 @@ function changeColor(box,color = "black"){
 buttonContainer.addEventListener('click', (e)=>{
     console.log(e.target.textContent);
     
-    color = e.target.textContent.toLowerCase();
+    target = e.target.textContent.toLowerCase();
 
-    if(color === "clear grid"){
+    if(target === "clear grid"){
         clearGrid();
         createGrid(size);
+    }else if(target === "change grid size"){
+        getGridSize();
+    }else{
+        color = target
     }
     
 })
@@ -83,8 +88,8 @@ gridContainer.addEventListener("mouseover", (e) =>{
 })
 
 //grabbing button and assigning function
-gridBtn = document.querySelector("#grid-size");
-document.getElementById("grid-size").onclick = getGridSize;
+// gridBtn = document.querySelector("#grid-size");
+// document.getElementById("grid-size").onclick = getGridSize;
     
 //Function for button click to give user prompt 
 function getGridSize(){
