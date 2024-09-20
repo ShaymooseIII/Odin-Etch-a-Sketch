@@ -17,7 +17,6 @@ function createGrid(gridSize = 16){
         for(let j = 1; j <= gridSize; j++){
             let box = document.createElement("div");
             box.classList.add("box");
-            // box.setAttribute("id", `box-${i+j}`);
             row.appendChild(box);
         }
 
