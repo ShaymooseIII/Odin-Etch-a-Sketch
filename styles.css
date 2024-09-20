@@ -29,6 +29,10 @@
     background-color: white;
     color: black;
 }
+#rainbow{
+    background-color: gold;
+    color: black;
+}
 
 #grid-size{
     padding: 5px;
