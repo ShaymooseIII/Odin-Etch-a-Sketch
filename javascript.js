@@ -86,9 +86,14 @@ gridContainer.addEventListener("mouseover", (e) =>{
     
 //Function for button click to give user prompt 
 function getGridSize(){
+    // hold the old size value
+    let buffer = size;
     //take input and create new grid 
     size = prompt("Enter grid size(no more than 100):");
     if(size !== null && size <= 100){
         createGrid(size);
+    }else{
+        //change the size value back to old size if it doesnt match constraints
+        size = buffer;
     }
 }
