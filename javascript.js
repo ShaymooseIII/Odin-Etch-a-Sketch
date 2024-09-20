@@ -65,7 +65,7 @@ buttonContainer.addEventListener('click', (e)=>{
     
     target = e.target.textContent.toLowerCase();
 
-    if(target === "clear grid"){
+    if(target === "clear"){
         clearGrid();
         createGrid(size);
     }else if(target === "change grid size"){
