@@ -10,6 +10,24 @@
     display: flex;
     justify-content: center;
     margin: 10px;
+    gap: 5px;
+}
+
+#black{
+    background-color: black;
+    color: white;
+}
+#blue{
+    background-color: blue;
+    color: white;
+}
+#green{
+    background-color: green;
+    color: white;
+}
+#white{
+    background-color: white;
+    color: black;
 }
 
 #grid-size{

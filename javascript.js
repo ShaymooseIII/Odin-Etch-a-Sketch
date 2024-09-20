@@ -1,5 +1,8 @@
 //declaration of document elements
 const gridContainer = document.querySelector(".grid-container");
+const buttonContainer = document.querySelector(".button-container");
+
+let size = 16
 //function to create grid default will be 16
 function createGrid(gridSize = 16){
     //clear grid before creation
@@ -27,16 +30,42 @@ function clearGrid(){
     }
 }
 
-// createGrid();
 
 //function for changing of color to accept color and element
 function changeColor(box,color = "black"){
+    console.log(color);
     switch(color){
+        default:
+            box.style.backgroundColor = "black";
+            break;
         case "black":
             box.style.backgroundColor = "black";
             break;
+        case "blue":
+            box.style.backgroundColor = "blue";
+            break;
+        case "green":
+            box.style.backgroundColor = "green";
+            break;
+        case "white":
+            box.style.backgroundColor = "white";
+            break;
+
     }
 }
+
+//event listener for buttons
+buttonContainer.addEventListener('click', (e)=>{
+    console.log(e.target.textContent);
+    
+    color = e.target.textContent.toLowerCase();
+
+    if(color === "clear grid"){
+        clearGrid();
+        createGrid(size);
+    }
+    
+})
 
 // event listener for when mouse enters box
 gridContainer.addEventListener("mouseover", (e) =>{
@@ -44,7 +73,7 @@ gridContainer.addEventListener("mouseover", (e) =>{
     console.log(box);
     if(box !== e.currentTarget){
         //changing of the box color 
-        changeColor(box);
+        changeColor(box, color);
     }
 })
 
@@ -56,7 +85,7 @@ document.getElementById("grid-size").onclick = getGridSize;
 function getGridSize(){
 console.log("clicked");
     //take input and create new grid 
-    let size = prompt("Enter grid size(no more than 100):");
+    size = prompt("Enter grid size(no more than 100):");
     if(size !== null && size <= 100){
         createGrid(size);
     }
