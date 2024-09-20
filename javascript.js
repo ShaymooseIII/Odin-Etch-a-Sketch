@@ -33,7 +33,6 @@ function clearGrid(){
 
 //function for changing of color to accept color and element
 function changeColor(box,color = "black"){
-    console.log(color);
     switch(color){
         default:
             box.style.backgroundColor = "black";
@@ -61,7 +60,6 @@ function changeColor(box,color = "black"){
 
 //event listener for buttons
 buttonContainer.addEventListener('click', (e)=>{
-    console.log(e.target.textContent);
     
     target = e.target.textContent.toLowerCase();
 
@@ -79,7 +77,6 @@ buttonContainer.addEventListener('click', (e)=>{
 // event listener for when mouse enters box
 gridContainer.addEventListener("mouseover", (e) =>{
     box = e.target;
-    console.log(box);
     if(box !== e.currentTarget){
         //changing of the box color 
         changeColor(box, color);
@@ -89,7 +86,6 @@ gridContainer.addEventListener("mouseover", (e) =>{
     
 //Function for button click to give user prompt 
 function getGridSize(){
-console.log("clicked");
     //take input and create new grid 
     size = prompt("Enter grid size(no more than 100):");
     if(size !== null && size <= 100){
