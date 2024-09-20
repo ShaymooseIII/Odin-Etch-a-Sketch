@@ -2,6 +2,8 @@
 const gridContainer = document.querySelector(".grid-container");
 //function to create grid default will be 16
 function createGrid(gridSize = 16){
+    //clear grid before creation
+    clearGrid();
     // Loop to create the X by X grid
     for(let i = 0; i < gridSize; i++){
         //individual id and class assignment
@@ -18,13 +20,20 @@ function createGrid(gridSize = 16){
     }
 }
 
+//clear grid function
+function clearGrid(){
+    while(gridContainer.firstChild){
+        gridContainer.removeChild(gridContainer.lastChild);
+    }
+}
+
 // createGrid();
 
 //function for changing of color to accept color and element
 function changeColor(box,color = "black"){
     switch(color){
         case "black":
-            box.style.backgroundColor = "black";
+            box.style.backgroundColor = "blue";
             break;
     }
 }

@@ -9,7 +9,13 @@
 .button-container{
     display: flex;
     justify-content: center;
+    margin: 10px;
 }
+
+#grid-size{
+    padding: 5px;
+}
+
 .grid-section{
     display: flex;
     justify-content: center;
