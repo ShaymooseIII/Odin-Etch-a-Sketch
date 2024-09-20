@@ -97,3 +97,6 @@ function getGridSize(){
         size = buffer;
     }
 }
+
+//initialize grid when page loads
+createGrid();
