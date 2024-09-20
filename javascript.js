@@ -87,9 +87,6 @@ gridContainer.addEventListener("mouseover", (e) =>{
     }
 })
 
-//grabbing button and assigning function
-// gridBtn = document.querySelector("#grid-size");
-// document.getElementById("grid-size").onclick = getGridSize;
     
 //Function for button click to give user prompt 
 function getGridSize(){
