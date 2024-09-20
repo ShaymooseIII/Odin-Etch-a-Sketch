@@ -33,7 +33,7 @@ function clearGrid(){
 function changeColor(box,color = "black"){
     switch(color){
         case "black":
-            box.style.backgroundColor = "blue";
+            box.style.backgroundColor = "black";
             break;
     }
 }
@@ -56,8 +56,8 @@ document.getElementById("grid-size").onclick = getGridSize;
 function getGridSize(){
 console.log("clicked");
     //take input and create new grid 
-    let size = prompt("Enter grid size:");
-    if(size !== null){
+    let size = prompt("Enter grid size(no more than 100):");
+    if(size !== null && size <= 100){
         createGrid(size);
     }
 }
